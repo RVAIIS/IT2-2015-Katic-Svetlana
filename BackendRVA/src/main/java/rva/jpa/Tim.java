@@ -33,14 +33,14 @@ public class Tim implements Serializable {
 	private String sediste;
 
 	//bi-directional many-to-one association to Igrac
-	@OneToMany(mappedBy="timBean")
+	@OneToMany(mappedBy="tim")
 	@JsonIgnore
 	private List<Igrac> igracs;
 
 	//bi-directional many-to-one association to Liga
 	@ManyToOne
 	@JoinColumn(name="liga")
-	private Liga ligaBean;
+	private Liga liga;
 
 	public Tim() {
 	}
@@ -87,24 +87,25 @@ public class Tim implements Serializable {
 
 	public Igrac addIgrac(Igrac igrac) {
 		getIgracs().add(igrac);
-		igrac.setTimBean(this);
+		igrac.setTim(this);
 
 		return igrac;
 	}
 
 	public Igrac removeIgrac(Igrac igrac) {
 		getIgracs().remove(igrac);
-		igrac.setTimBean(null);
+		igrac.setTim(null);
 
 		return igrac;
 	}
 
-	public Liga getLigaBean() {
-		return this.ligaBean;
+	public Liga getLiga() {
+		return this.liga;
 	}
 
-	public void setLigaBean(Liga ligaBean) {
-		this.ligaBean = ligaBean;
+	public void setLiga(Liga liga) {
+		this.liga = liga;
 	}
+
 
 }

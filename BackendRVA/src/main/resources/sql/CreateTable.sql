@@ -20,7 +20,7 @@ CREATE TABLE igrac(
 	id integer NOT NULL,
     ime VARCHAR(30) NOT NULL,
     prezime VARCHAR(30) NOT NULL,
-    broj_reg INTEGER NOT NULL,
+    broj_reg VARCHAR(20) NOT NULL,
 	datum_rodjenja DATE NOT NULL,
 	nacionalnost INTEGER NOT NULL,
 	tim INTEGER NOT NULL

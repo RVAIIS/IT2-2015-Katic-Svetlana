@@ -29,6 +29,7 @@ public class TimRestController {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
+	@CrossOrigin
 	@GetMapping("tim")
 	@ApiOperation(value = "Vraća spisak svih timova iz baze podataka")
 	public Collection<Tim> getTim(){

@@ -28,6 +28,7 @@ public class LigaRestController {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
+	@CrossOrigin
 	@GetMapping("liga")
 	@ApiOperation(value = "Vraća spisak svih liga iz baze podataka")
 	public Collection<Liga> getLiga(){

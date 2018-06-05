@@ -37,12 +37,12 @@ public class Igrac implements Serializable {
 	//bi-directional many-to-one association to Nacionalnost
 	@ManyToOne
 	@JoinColumn(name="nacionalnost")
-	private Nacionalnost nacionalnostBean;
+	private Nacionalnost nacionalnost;
 
 	//bi-directional many-to-one association to Tim
 	@ManyToOne
 	@JoinColumn(name="tim")
-	private Tim timBean;
+	private Tim tim;
 
 	public Igrac() {
 	}
@@ -87,20 +87,20 @@ public class Igrac implements Serializable {
 		this.prezime = prezime;
 	}
 
-	public Nacionalnost getNacionalnostBean() {
-		return this.nacionalnostBean;
+	public Nacionalnost getNacionalnost() {
+		return this.nacionalnost;
 	}
 
-	public void setNacionalnostBean(Nacionalnost nacionalnostBean) {
-		this.nacionalnostBean = nacionalnostBean;
+	public void setNacionalnost(Nacionalnost nacionalnost) {
+		this.nacionalnost = nacionalnost;
 	}
 
-	public Tim getTimBean() {
-		return this.timBean;
+	public Tim getTim() {
+		return this.tim;
 	}
 
-	public void setTimBean(Tim timBean) {
-		this.timBean = timBean;
+	public void setTim(Tim tim) {
+		this.tim = tim;
 	}
 
 }

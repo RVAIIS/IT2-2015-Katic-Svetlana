@@ -29,6 +29,7 @@ public class NacionalnostRestController {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
+	@CrossOrigin
 	@GetMapping("nacionalnost")
 	@ApiOperation(value = "Vraća spisak svih nacionalnosti iz baze podataka")
 	public Collection<Nacionalnost> getNacionalnost(){
